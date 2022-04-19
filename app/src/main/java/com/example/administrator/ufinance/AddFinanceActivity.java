@@ -1,6 +1,7 @@
 package com.example.administrator.ufinance;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -31,8 +32,8 @@ public class AddFinanceActivity extends AppCompatActivity {
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Toast.makeText(getApplicationContext(), "teststsetse", Toast.LENGTH_SHORT).show();
-                //addFinance(v);
+                Intent intent = new Intent(AddFinanceActivity.this, FinanceActivity.class);
+                startActivity(intent);
                 try{
                     String date = dateEdit.getText().toString();
                     String description = descriptionEdit.getText().toString();
